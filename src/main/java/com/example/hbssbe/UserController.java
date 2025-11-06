@@ -48,13 +48,6 @@ public class UserController {
         return userService.updateUser(id, user);
     }
     
-    @GetMapping("/{id}")
-    public User getUser(@PathVariable Long id) {
-    	Optional<User> u = userService.getUser(id);
-    	if(u.isPresent()) 
-    		return u.get();
-    		
-    	return null;    	
-    }
+    
     
 }
