@@ -22,10 +22,7 @@ public class UserController {
     @GetMapping
     public List<User> getAllUsers() { return userService.getAllUsers(); }
     
-    @GetMapping("/{id}")
-    public User getuserbyId(@PathVariable Long id) {
-    	return ur.findById(id).get() ;
-    }
+    
     
     @GetMapping("/emal/{email}")
     public User getUserByEmail(@PathVariable String email) {
